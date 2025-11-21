@@ -6,24 +6,20 @@ $(document).ready(function () {
 		},
 		columnDefs: [
 			{
-				render: (data, type, row) => row.order,
+				render: (data, type, row) => `<a href="${row.img}" data-lightbox="group"><img src="${row.img}" class="img-fluid" alt="${row.title}" style="max-height: 130px;"></a>`,
 				targets: 0,
-			},
-			{
-				render: (data, type, row) => `<a href="${row.img}" data-lightbox="group"><img src="${row.img}" class="img-thumbnail rounded-start" alt="${row.title}" style="max-height: 130px;"></a>`,
-				targets: 1,
 				orderable: false,
 			},
 			{
-				render: (data, type, row) => `<h6><a href="${row.href}">${row.title}</a></h6><p>${row.item}</p>`,
-				targets: 2
+				render: (data, type, row) => `<h6><a href="${row.href}">${row.title}</a></h6><p>${row.item}</p><small>#${row.order}</small>`,
+				targets: 1
 			},
 			{
 				render: (data, type, row) => `<p class="small">${row.unitPrice} *${row.amount}</p><p class="small">=${row.total}</p>`,
-				targets: 3,
+				targets: 2,
 				orderable: false,
 			}
 		],
-		order: [[0, "desc"], [2, "asc"]]
+		order: [[1, "asc"]]
 	});
 });
