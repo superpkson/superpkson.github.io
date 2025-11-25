@@ -1,75 +1,5 @@
 [
     {
-        "order": "3899450",
-        "img": "https://shop.hololivepro.com/cdn/shop/files/holo_ShioriNovella_BCbanner_JP_4_240x.png?v=1746077440",
-        "href": "https://shop.hololivepro.com/products/shiorinovella_birthday_2025?variant=46498174795996",
-        "title": "シオリ・ノヴェラ 誕生日記念2025",
-        "item": "セット / 誕生日記念フルセット 数量限定ver.",
-        "unitPrice": "HK$880.00",
-        "amount": "2",
-        "total": "HK$1,760.00"
-    },
-    {
-        "order": "3899450",
-        "img": "https://shop.hololivepro.com/cdn/shop/files/hololivefriends_vol.7_shohin_01AyundaRisu_9af57c09-579d-4a7c-b358-d7354191dfda_240x.png?v=1715331928",
-        "href": "https://shop.hololivepro.com/products/hololivefriendswithu_ayundarisu?variant=44791268081884",
-        "title": "hololive friends with u アユンダ・リス",
-        "item": "グッズ / アユンダ・リス",
-        "unitPrice": "HK$190.00",
-        "amount": "1",
-        "total": "HK$190.00"
-    },
-    {
-        "order": "3899450",
-        "img": "https://shop.hololivepro.com/cdn/shop/files/holo_OkaburiMascot_vol3_banner_JP_14_240x.png?v=1744872274",
-        "href": "https://shop.hololivepro.com/products/lovelyokaburimascot_vol3?variant=46479047852252",
-        "title": "Lovely Okaburi Mascot Series vol.3",
-        "item": "缶バッジ マスコットver. / 缶バッジ マスコットver. さくらみこ",
-        "unitPrice": "HK$30.00",
-        "amount": "1",
-        "total": "HK$30.00"
-    },
-    {
-        "order": "3899450",
-        "img": "https://shop.hololivepro.com/cdn/shop/files/holo_OkaburiMascot_vol3_banner_JP_13_240x.png?v=1744872274",
-        "href": "https://shop.hololivepro.com/products/lovelyokaburimascot_vol3?variant=46479047753948",
-        "title": "Lovely Okaburi Mascot Series vol.3",
-        "item": "缶バッジ / 缶バッジ さくらみこ",
-        "unitPrice": "HK$30.00",
-        "amount": "1",
-        "total": "HK$30.00"
-    },
-    {
-        "order": "3899450",
-        "img": "https://shop.hololivepro.com/cdn/shop/files/holo_OkaburiMascot_vol3_banner_JP_10_240x.png?v=1744872274",
-        "href": "https://shop.hololivepro.com/products/lovelyokaburimascot_vol3?variant=46479047655644",
-        "title": "Lovely Okaburi Mascot Series vol.3",
-        "item": "クリアファイル＆ステッカー / クリアファイル＆ステッカー さくらみこ",
-        "unitPrice": "HK$55.00",
-        "amount": "1",
-        "total": "HK$55.00"
-    },
-    {
-        "order": "3899450",
-        "img": "https://shop.hololivepro.com/cdn/shop/files/holo_OkaburiMascot_vol3_banner_JP_9_240x.png?v=1744872274",
-        "href": "https://shop.hololivepro.com/products/lovelyokaburimascot_vol3?variant=46479047557340",
-        "title": "Lovely Okaburi Mascot Series vol.3",
-        "item": "アクリルスタンド / アクリルスタンド さくらみこ",
-        "unitPrice": "HK$90.00",
-        "amount": "1",
-        "total": "HK$90.00"
-    },
-    {
-        "order": "3899450",
-        "img": "https://shop.hololivepro.com/cdn/shop/files/holo_OkaburiMascot_vol3_banner_JP_6_240x.png?v=1744872344",
-        "href": "https://shop.hololivepro.com/products/lovelyokaburimascot_vol3?variant=46479047262428",
-        "title": "Lovely Okaburi Mascot Series vol.3",
-        "item": "おかぶりマスコット / おかぶりマスコット さくらみこ",
-        "unitPrice": "HK$110.00",
-        "amount": "1",
-        "total": "HK$110.00"
-    },
-    {
         "order": "4396351",
         "img": "https://shop.hololivepro.com/cdn/shop/files/holo_MoriCalliope_5th_banner_JP_250910_ol_3_240x.png?v=1757484256",
         "href": "https://shop.hololivepro.com/products/moricalliope_anniversary_5th?variant=46910418747612",
@@ -128,36 +58,6 @@
         "unitPrice": "HK$55.00",
         "amount": "1",
         "total": "HK$55.00"
-    },
-    {
-        "order": "3933112",
-        "img": "https://shop.hololivepro.com/cdn/shop/files/holo_RaoraPanthera_BC_banner_JP_250508_ol_4_240x.png?v=1746778258",
-        "href": "https://shop.hololivepro.com/products/raorapanthera_birthday_2025?variant=46524830351580",
-        "title": "ラオーラ・パンテーラ 誕生日記念2025",
-        "item": "セット / 誕生日記念フルセット 数量限定ver.",
-        "unitPrice": "HK$785.00",
-        "amount": "1",
-        "total": "HK$785.00"
-    },
-    {
-        "order": "3933112",
-        "img": "https://shop.hololivepro.com/cdn/shop/files/Gura_reprint_item_0425_03_240x.png?v=1746105961",
-        "href": "https://shop.hololivepro.com/products/gawrgura_merch_rereleased?variant=46511619473628",
-        "title": "がうる・ぐら グッズ 復刻販売",
-        "item": "グッズ / 恐竜ぐらぬいぐるみ 復刻版",
-        "unitPrice": "HK$195.00",
-        "amount": "1",
-        "total": "HK$195.00"
-    },
-    {
-        "order": "3933112",
-        "img": "https://shop.hololivepro.com/cdn/shop/files/Gura_reprint_item_0425_04_240x.png?v=1746105961",
-        "href": "https://shop.hololivepro.com/products/gawrgura_merch_rereleased?variant=46511619506396",
-        "title": "がうる・ぐら グッズ 復刻販売",
-        "item": "グッズ / えびちゃんぬいぐるみ 復刻版",
-        "unitPrice": "HK$95.00",
-        "amount": "1",
-        "total": "HK$95.00"
     },
     {
         "order": "4079909",
