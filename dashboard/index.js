@@ -130,9 +130,50 @@ $(document).ready(function () {
 		};
 	}
 	
-	connect();
+	const servers = JSON.parse(getCookie('servers'));
+	servers.forEach(server => {
+		connect(server.addr);
+	});
 });
 
 function index(perc) {
   return perc < 70 ? 0 : perc < 90 ? 1 : 2;
+}
+
+$(function() {	
+	$("#btn-add-server").click(function() {
+		let name = prompt('Server name: ', 'computer');
+		let addr = prompt('Server address: ', 'wss://');
+		
+		servers = JSON.parse(getCookie('servers'));
+		if (servers === null)
+			servers = [];
+		servers.push({
+			name: name,
+			addr: addr
+		});
+		
+		setCookie('servers', JSON.stringify(servers))
+	});
+});
+
+
+function setCookie(cname, cvalue) {
+	document.cookie = cname + "=" + cvalue + "; path=/; SameSite=Lax; secure";
+}
+
+function getCookie(cname) {
+	let name = cname + "=";
+	let decodedCookie = decodeURIComponent(document.cookie);
+	let ca = decodedCookie.split(';');
+	for(let i = 0; i <ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	return null;
 }
