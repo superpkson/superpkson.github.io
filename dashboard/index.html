@@ -10,16 +10,12 @@
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.1.0/dist/chartjs-plugin-annotation.min.js"></script>
 		<script type="text/javascript" charset="utf-8"  src="index.js"></script>
-		<script src="https://cdn.socket.io/4.8.1/socket.io.min.js" integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+" crossorigin="anonymous"></script>
+		<link rel="manifest" href="manifest.json">
 	</head>
-	<body class="p-3">
-		<div class="position-fixed bottom-0 end-0 m-3">
-			<button type="button" class="btn btn-primary btn-lg" id="btn-add-server">
-				<i class="bi bi-plus"></i>
-			</button>
+	<body>
+		<div class="container-fluid">
+			<div class="row" id="list-cards"></div>
 		</div>
-
-		<div class="row" id="list-cards"><div>
 	</body>
 </html>
 

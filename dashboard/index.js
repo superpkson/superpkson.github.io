@@ -1,89 +1,31 @@
+const device_chart = {}
+
 $(document).ready(function () {	
-	const servers = JSON.parse(getCookie('servers'));
-	servers.forEach(server => {
-		addCard(server);
-	});
+	const urlParams = new URLSearchParams(window.location.search);
+	const server = urlParams.get('s');
+	connect(server);
 });
 
-$(function() {	
-	$("#btn-add-server").click(function() {
-		let name = prompt('Server name: ', 'computer');
-		let addr = prompt('Server address: ', 'wss://');
-		
-		servers = JSON.parse(getCookie('servers'));
-		if (servers === null)
-			servers = [];
-		servers.push({
-			name: name,
-			addr: addr
-		});
-		
-		setCookie('servers', JSON.stringify(servers))
-	});
-});
+const COLORS = ['rgb(140, 214, 16)', 'rgb(239, 198, 0)', 'rgb(231, 24, 49)'];
 
-
-function setCookie(cname, cvalue) {
-	document.cookie = cname + "=" + cvalue + "; path=/; SameSite=Lax; secure";
-}
-
-function getCookie(cname) {
-	let name = cname + "=";
-	let decodedCookie = decodeURIComponent(document.cookie);
-	let ca = decodedCookie.split(';');
-	for(let i = 0; i <ca.length; i++) {
-		let c = ca[i];
-		while (c.charAt(0) == ' ') {
-			c = c.substring(1);
-		}
-		if (c.indexOf(name) == 0) {
-			return c.substring(name.length, c.length);
-		}
-	}
-	return null;
-}
-
-function addCard(obj) {
-	content = `<div class="col-sm-12 mt-1">
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">` + obj.name + `</h5>
-						<h6 class="card-subtitle mb-2 text-muted">` + obj.addr + `</h6>
-						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="card-link">Card link</a>
-						<a href="#" class="card-link">Another link</a>
-						<canvas id="` + obj.name + `-gpu"></canvas>
-						<canvas id="` + obj.name + `-memory"></canvas>
-					</div>
-				</div>
-			</div>`;
-	$("#list-cards").append(content);
-	
-	const ctx = document.getElementById(obj.name + "-gpu");
-	
+function initGaugeChart(ctx, title) {	
 	const annotation = {
-	  type: 'doughnutLabel',
-	  content: ({chart}) => [
-		chart.data.datasets[0].data[0].toFixed(2) + ' %',
-		'CPU utilization',
-	  ],
-	  drawTime: 'beforeDraw',
-	  position: {
-		y: '-50%'
-	  },
-	  font: [{size: 50, weight: 'bold'}, {size: 20}],
-	  color: ({chart}) => [COLORS[index(chart.data.datasets[0].data[0])], 'grey']
+		type: 'doughnutLabel',
+		content: ({chart}) => [
+			(chart.data.datasets[0].data[0] / (chart.data.datasets[0].data[0] + chart.data.datasets[0].data[1]) * 100).toFixed(2) + ' %',
+			title // 'CPU utilization',
+		],
+		drawTime: 'beforeDraw',
+		position: {
+			y: '-50%'
+		},
+		font: [{size: 50, weight: 'bold'}, {size: 20}],
+		color: ({chart}) => [COLORS[index(chart.data.datasets[0].data[0])], 'grey']
 	};
 	
-	const COLORS = ['rgb(140, 214, 16)', 'rgb(239, 198, 0)', 'rgb(231, 24, 49)'];
-	const MIN = 0;
-	const MAX = 100;
-
-	const value = Math.floor(Math.random() * MAX);
-
 	const data = {
 	  datasets: [{
-		data: [value, 100 - value],
+		data: [0, 100],
 		backgroundColor(ctx) {
 		  if (ctx.type !== 'data') {
 			return;
@@ -114,9 +56,7 @@ function addCard(obj) {
 	  }
 	};
 
-	const chart = new Chart(ctx, config);
-	
-	connect(chart, obj.addr);
+	return new Chart(ctx, config);
 }
 
 function index(perc) {
@@ -124,7 +64,7 @@ function index(perc) {
 }
 
 
-function connect(chart, uri){
+function connect(uri){
 	var ws = new WebSocket(uri);
 	
 	ws.onopen = function(event) {
@@ -136,12 +76,49 @@ function connect(chart, uri){
 		// console.log('Message received:', event.data);
 		// Process the incoming data
 		const obj = JSON.parse(event.data)
-		// console.log(obj)
+		// console.log(obj);
 		
-		chart.data.datasets.forEach(dataset => {
-			dataset.data = [obj[0].temp, 75 - obj[0].temp];
-		});
-		chart.update();
+		for (let i = 0; i < obj.gpu.length; i++) {
+			const gpu = obj.gpu[i];
+			if ($('#gpu' + i).length === 0) {
+				content = `<div class="col m-1 p-0">
+							<div class="card" id="gpu` + i + `">
+								<div class="card-body">
+									<h5 class="card-title">` + gpu.name + `</h5>
+									<h6 class="card-subtitle mb-2 text-muted">#gpu` + i + ` - v` + gpu.driver + `</h6>
+									<div class="row">
+										<canvas class="col chart-temp"></canvas>
+										<canvas class="col chart-memory"></canvas>
+									</div>
+								</div>
+							</div>
+						</div>`;
+				$("#list-cards").append(content);
+				
+				const chart_temp = initGaugeChart($("#gpu" + i).find(".chart-temp")[0], 'Temperature');
+				const chart_memory = initGaugeChart($("#gpu" + i).find(".chart-memory")[0], 'Memory');
+				
+				device_chart["gpu" + i] = {
+					"temp": chart_temp,
+					"memory": chart_memory
+				};
+			}
+			device_chart["gpu" + i].temp.data.datasets.forEach(dataset => {
+				dataset.data = [gpu.temp, 75 - gpu.temp];
+			});
+			device_chart["gpu" + i].temp.update();
+			
+			
+			device_chart["gpu" + i].memory.data.datasets.forEach(dataset => {
+				dataset.data = [gpu.memory.used, gpu.memory.free];
+			});
+			device_chart["gpu" + i].memory.update();
+			//chart.data.datasets.forEach(dataset => {
+			//	dataset.data = [obj[0].temp, 75 - obj[0].temp];
+			//});
+			//chart.update();
+		}
+		
 	};
 	
 	ws.onclose = function(event) {
