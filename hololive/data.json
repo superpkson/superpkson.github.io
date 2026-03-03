@@ -30,39 +30,9 @@
         "total": "HK$110.00"
     },
     {
-        "order": "4317767",
-        "img": "https://shop.hololivepro.com/cdn/shop/files/holo_sakuramiko_7th_banner_JP_4_shusei_240x.png?v=1753942782",
-        "href": "https://shop.hololivepro.com/products/sakuramiko_anniversary_7th?variant=46785589510364",
-        "title": "さくらみこ 活動7周年記念",
-        "item": "セット / 活動7周年記念フルセット",
-        "unitPrice": "HK$895.00",
-        "amount": "1",
-        "total": "HK$895.00"
-    },
-    {
-        "order": "4317767",
-        "img": "https://shop.hololivepro.com/cdn/shop/files/holo_TokoyamiTowa_A_BC_banner_JP_250806_3_240x.png?v=1756800416",
-        "href": "https://shop.hololivepro.com/products/tokoyamitowa_birthday_2025?variant=46802302238940",
-        "title": "常闇トワ 誕生日記念2025",
-        "item": "セット / 誕生日記念フルセット",
-        "unitPrice": "HK$735.00",
-        "amount": "1",
-        "total": "HK$735.00"
-    },
-    {
-        "order": "4317767",
-        "img": "https://shop.hololivepro.com/cdn/shop/files/holo_Adven_2th_banner_JP_250822_6_240x.png?v=1756107755",
-        "href": "https://shop.hololivepro.com/products/hololiveenadvent_anniversary_2nd?variant=46856486158556",
-        "title": "ホロライブEnglish -Advent- 2周年記念",
-        "item": "連結チャーム / 連結チャーム シオリ・ノヴェラ",
-        "unitPrice": "HK$55.00",
-        "amount": "1",
-        "total": "HK$55.00"
-    },
-    {
         "order": "4533467",
         "img": "https://shop.hololivepro.com/cdn/shop/files/RaoraPanthera_ChattiniDay2025_banner_JP_3_240x.png?v=1760692324",
-        "href": "/products/raorapanthera_chattiniday2025?variant=47035646542044",
+        "href": "https://shop.hololivepro.com/products/raorapanthera_chattiniday2025?variant=47035646542044",
         "title": "ラオーラ・パンテーラ Chattiniの日2025",
         "item": "セット / チャッティーニの日2025 フルセット 数量限定ver.",
         "unitPrice": "HK$795.00",
@@ -72,7 +42,7 @@
     {
         "order": "4533467",
         "img": "https://shop.hololivepro.com/cdn/shop/files/holo_miComet_OF_banner_JP_250924_ol_6_240x.png?v=1758867724",
-        "href": "/products/micomet_newoutfit_2025?variant=46968914018524",
+        "href": "https://shop.hololivepro.com/products/micomet_newoutfit_2025?variant=46968914018524",
         "title": "miComet 新衣装記念2025",
         "item": "グッズ / ぬいぐるみキーホルダー miCometベアブランド衣装（みこ）ver.",
         "unitPrice": "HK$160.00",
@@ -82,7 +52,7 @@
     {
         "order": "4533467",
         "img": "https://shop.hololivepro.com/cdn/shop/files/holo_Myth5thAnniversaryCelebration_JP_0905_5_240x.png?v=1758072035",
-        "href": "/products/hololiveenmyth_anniversary_5th?variant=46935431545052",
+        "href": "https://shop.hololivepro.com/products/hololiveenmyth_anniversary_5th?variant=46935431545052",
         "title": "ホロライブEnglish -Myth- 5周年記念",
         "item": "コインメダル / コインメダル 森カリオペ",
         "unitPrice": "HK$80.00",
@@ -92,7 +62,7 @@
     {
         "order": "4533467",
         "img": "https://shop.hololivepro.com/cdn/shop/files/holo_Myth5thAnniversaryCelebration_JP_0905_240x.png?v=1758072035",
-        "href": "/products/hololiveenmyth_anniversary_5th?variant=46935431446748",
+        "href": "https://shop.hololivepro.com/products/hololiveenmyth_anniversary_5th?variant=46935431446748",
         "title": "ホロライブEnglish -Myth- 5周年記念",
         "item": "コレクションカード / コレクションカード 森カリオペ",
         "unitPrice": "HK$30.00",
@@ -102,7 +72,7 @@
     {
         "order": "4533467",
         "img": "https://shop.hololivepro.com/cdn/shop/files/holo_Myth5thAnniversaryCelebration_JP_0905_8_240x.png?v=1758072035",
-        "href": "/products/hololiveenmyth_anniversary_5th?variant=46935431708892",
+        "href": "https://shop.hololivepro.com/products/hololiveenmyth_anniversary_5th?variant=46935431708892",
         "title": "ホロライブEnglish -Myth- 5周年記念",
         "item": "記念帽子 / 記念帽子 一伊那尓栖",
         "unitPrice": "HK$240.00",
@@ -112,7 +82,7 @@
     {
         "order": "4533467",
         "img": "https://shop.hololivepro.com/cdn/shop/files/holo_holo_fannamecharm_banner_JP_250909_ol_2_240x.png?v=1758011252",
-        "href": "/products/hololiveproduction_fannamecharm?variant=46931388203228",
+        "href": "https://shop.hololivepro.com/products/hololiveproduction_fannamecharm?variant=46931388203228",
         "title": "ホロライブプロダクション ファンネームチャーム",
         "item": "ホロライブEnglish / ラオーラ・パンテーラ",
         "unitPrice": "HK$60.00",
