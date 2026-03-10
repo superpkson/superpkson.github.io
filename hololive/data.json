@@ -138,5 +138,15 @@
         "unitPrice": "HK$55.00",
         "amount": 1,
         "total": "HK$55.00"
+    },
+    {
+        "order": "5077757",
+        "img": "https://shop.hololivepro.com/cdn/shop/files/holo_JuufuuteiRaden_BC_banner_JP_260129_ol_3_240x.png?v=1769744108",
+        "href": "https://shop.hololivepro.com/products/juufuuteiraden_birthday_2026?variant=47507468222684",
+        "title": "儒烏風亭らでん 誕生日記念2026",
+        "item": "セット / 誕生日記念フルセット",
+        "unitPrice": "HK$950.00",
+        "amount": 1,
+        "total": "HK$950.00"
     }
 ]
