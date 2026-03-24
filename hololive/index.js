@@ -6,7 +6,7 @@ $(document).ready(function () {
 		},
 		columnDefs: [
 			{
-				render: (data, type, row) => `<a href="${row.img}" data-lightbox="group"><img src="${row.img}" class="img-fluid" alt="${row.title}" style="max-height: 130px;"></a>`,
+				render: (data, type, row) => `<a href="${row.img}" data-lightbox="group"><img src="${row.img}" class="img-fluid img-thumbnail" alt="${row.title}" style="min-width:70px; max-height:130px;"></a>`,
 				targets: 0,
 				orderable: false,
 			},
